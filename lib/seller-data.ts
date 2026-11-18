@@ -1,6 +1,8 @@
+import type {LocalizedContent} from './i18n/content';
+import {getLanguage} from './i18n/store';
 import {products as originals,stores as originalStores} from './demo-data';
-export type Store={id:number;name:string;description:string;emirate:string;area:string;category:string;activity:string;initial:string;logo:string;cover:string;open:string;close:string;days:string[];contact:string;active:boolean;license:'غير مقدم'|'قيد المراجعة'|'معتمد تجريبياً'|'مرفوض'};
-export type CatalogProduct={id:number;storeId:number;name:string;store:string;emirate:string;category:string;price:number;image:string;imageUrl:string;description:string;kind:'product'|'service';stock:number;status:'مسودة'|'منشور'|'موقوف'};
+export type Store=LocalizedContent&{id:number;name:string;description:string;emirate:string;area:string;category:string;activity:string;initial:string;logo:string;cover:string;open:string;close:string;days:string[];contact:string;active:boolean;license:'غير مقدم'|'قيد المراجعة'|'معتمد تجريبياً'|'مرفوض'};
+export type CatalogProduct=LocalizedContent&{id:number;storeId:number;name:string;store:string;emirate:string;category:string;price:number;image:string;imageUrl:string;description:string;kind:'product'|'service';stock:number;status:'مسودة'|'منشور'|'موقوف'};
 export type Line={productId:number;quantity:number;name?:string;price?:number;storeId?:number};
 export const orderStatuses=['جديد','قيد التجهيز','جاهز','مكتمل','ملغى'] as const;
 export type OrderStatus=typeof orderStatuses[number];
@@ -21,4 +23,4 @@ export const storeHref=(id:number)=>id<=4?`/store/${id}/`:`/store/?id=${id}`;
 export const itemStore=(l:Line,catalog:CatalogProduct[])=>l.storeId??catalog.find(p=>p.id===l.productId)?.storeId;
 export const itemPrice=(l:Line,catalog:CatalogProduct[])=>l.price??catalog.find(p=>p.id===l.productId)?.price??0;
 export const storeOrderStatus=(o:DemoOrder,id:number):OrderStatus=>o.storeStatuses?.[String(id)]??(orderStatuses.includes(o.status as OrderStatus)?o.status as OrderStatus:'قيد التجهيز');
-export const money=(n:number)=>new Intl.NumberFormat('ar-AE',{maximumFractionDigits:2}).format(n)+' د.إ';
+export const money=(n:number)=>new Intl.NumberFormat(getLanguage()==='en'?'en-AE':'ar-AE',{maximumFractionDigits:2}).format(n)+(getLanguage()==='en'?' AED':' د.إ');

@@ -27,7 +27,12 @@
     "staging:test:security": "node staging/tests/security.mjs",
     "staging:test:ui": "node staging/tests/ui.mjs",
     "staging:test:jwt": "node staging/tests/real-jwt.mjs",
-    "staging:test:database": "node staging/tests/run-database.mjs"
+    "staging:test:database": "node staging/tests/run-database.mjs",
+    "test:localization": "node tests/localization-content.mjs && node tests/localization.mjs",
+    "test:localization-responsive": "node tests/localization-responsive.mjs",
+    "test:localization-database": "npm run staging:test:database && node tests/localization-database.mjs",
+    "test:localization-layout": "node tests/localization-layout.mjs",
+    "staging:test:localization": "node staging/tests/localization.mjs"
   },
   "dependencies": {
     "@supabase/ssr": "0.12.7",

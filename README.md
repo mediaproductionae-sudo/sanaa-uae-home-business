@@ -45,3 +45,16 @@ npm run staging:typecheck
 بعد البناء: `npm run test:accounts` و`npm run test:seller` و`npm run test:admin` و`npm run test:responsive` و`npm run test:links`.
 
 ملفات `.env.example` قوالب فارغة. مفاتيح الاتصال وكلمات المرور وملفات البناء و`node_modules` مستبعدة من Git.
+
+## العربية والإنجليزية
+
+زر اللغة يعمل قبل الدخول وبعده، ويحفظ الاختيار مستقلاً عن بيانات الحساب والسلة. يدعم الكتالوج ترجمة اختيارية مع الرجوع للمحتوى الأصلي دون تكرار المنتجات. راجع [دليل اللغات ونتائج التحقق](docs/localization.md).
+
+```sh
+npm run test:localization
+npm run test:localization-responsive
+npm run test:localization-layout
+npm run test:localization-database
+```
+
+اختبار قاعدة البيانات الأخير يستخدم حاوية PostgreSQL المحلية المعزولة ويعيد تهيئة قاعدة الاختبار فقط؛ لا يستخدم مشروع Supabase مستضافاً. يلزم تشغيل `npm run db:test:start` أولاً.
