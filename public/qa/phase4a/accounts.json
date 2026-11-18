@@ -1,0 +1,26 @@
+[
+  {
+    "width": 1920,
+    "registration": "pass",
+    "complaints": "pass",
+    "logout": "pass",
+    "menu": "pass",
+    "invalidIdRecovery": "pass"
+  },
+  {
+    "width": 1024,
+    "registration": "pass",
+    "complaints": "pass",
+    "logout": "pass",
+    "menu": "pass",
+    "invalidIdRecovery": "pass"
+  },
+  {
+    "width": 390,
+    "registration": "pass",
+    "complaints": "pass",
+    "logout": "pass",
+    "menu": "pass",
+    "invalidIdRecovery": "pass"
+  }
+]

@@ -1,0 +1,50 @@
+{
+  "name": "sanaa-home-business-platform",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "node scripts/dev.mjs",
+    "build": "next build",
+    "typecheck": "tsc --noEmit",
+    "test:responsive": "node tests/responsive.mjs",
+    "test:navigation": "node tests/navigation.mjs",
+    "test:accounts": "node tests/account-flows.mjs",
+    "test:links": "node tests/links.mjs",
+    "test:seller": "node tests/seller.mjs",
+    "test:admin": "node tests/admin.mjs",
+    "test:admin-extra": "node tests/admin-extra.mjs",
+    "test:admin-kpis": "node tests/admin-kpis.mjs",
+    "db:test:start": "node scripts/database/start-test.mjs",
+    "db:test:reset": "node scripts/database/reset-test.mjs",
+    "db:test": "node scripts/database/reset-test.mjs && node supabase/tests/rls-foundation.mjs",
+    "db:types:test": "node scripts/database/generate-types.mjs",
+    "staging:prepare": "node staging/prepare.mjs",
+    "staging:dev": "node staging/prepare.mjs && next dev staging --hostname 127.0.0.1 --port 3100",
+    "staging:build": "node staging/prepare.mjs && next build staging",
+    "staging:start": "node staging/serve.mjs",
+    "staging:typecheck": "tsc --noEmit --project staging/tsconfig.json",
+    "staging:bootstrap-admin": "node staging/bootstrap-admin.mjs",
+    "staging:test:security": "node staging/tests/security.mjs",
+    "staging:test:ui": "node staging/tests/ui.mjs",
+    "staging:test:jwt": "node staging/tests/real-jwt.mjs",
+    "staging:test:database": "node staging/tests/run-database.mjs"
+  },
+  "dependencies": {
+    "@supabase/ssr": "0.12.7",
+    "@supabase/supabase-js": "2.119.0",
+    "lucide-react": "^0.468.0",
+    "next": "^16.0.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "server-only": "0.0.1",
+    "sharp": "0.35.5"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "@types/react": "^19.2.0",
+    "@types/react-dom": "^19.2.0",
+    "pg": "8.23.1",
+    "playwright-core": "^1.65.1",
+    "typescript": "^5.9.0"
+  }
+}

@@ -1,0 +1,5 @@
+import {NextResponse,type NextRequest} from 'next/server';
+import {createServerClient} from '@supabase/ssr';
+import {config as connection} from './lib/config';
+export async function proxy(request:NextRequest){let response=NextResponse.next({request});const c=connection();if(c&&request.cookies.getAll().some(x=>x.name.startsWith('sb-'))){const client=createServerClient(c.url,c.key,{cookieOptions:{httpOnly:true,secure:c.secure,sameSite:'lax',path:'/'},cookies:{getAll(){return request.cookies.getAll()},setAll(values){values.forEach(({name,value})=>request.cookies.set(name,value));response=NextResponse.next({request});values.forEach(({name,value,options})=>response.cookies.set(name,value,{...options,httpOnly:true,secure:c.secure,sameSite:'lax',path:'/'}))}}});try{await client.auth.getUser()}catch{/* Private handlers independently verify; never authorize on proxy alone. */}}response.headers.set('Cache-Control','private, no-store');response.headers.set('Vary','Cookie');return response}
+export const config={matcher:['/((?!_next/static|_next/image|images/|fonts/|favicon.ico).*)']};

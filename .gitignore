@@ -1,0 +1,17 @@
+node_modules/
+.next/
+out/
+.env*
+!.env.example
+*.tsbuildinfo
+work/
+
+# Supabase CLI local state, never source or credentials
+supabase/.temp/
+supabase/.branches/
+
+# Separate Node staging build/assets; never change the static deployment
+staging/.next/
+staging/public/
+staging/.env*
+!staging/.env.example

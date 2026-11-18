@@ -1,0 +1,12 @@
+node_modules
+.next
+out
+.git
+.env*
+work
+supabase/.temp
+supabase/.branches
+
+staging/.next
+staging/public
+staging/.env*

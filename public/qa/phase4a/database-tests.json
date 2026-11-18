@@ -1,0 +1,107 @@
+{
+  "engine": "PostgreSQL 17.12 (Debian 17.12-1.pgdg13+1) on x86_64-pc-linux-gnu, compiled by gcc (Debian 14.2.0-19) 14.2.0, 64-bit",
+  "scope": "PostgreSQL engine with mocked Auth/Storage contracts; no hosted Supabase",
+  "passed": 25,
+  "results": [
+    {
+      "name": "50 tables exist; all public tables enforce RLS",
+      "status": "passed"
+    },
+    {
+      "name": "Reference seeds repeat without users, orders or active contracts",
+      "status": "passed"
+    },
+    {
+      "name": "Auth metadata cannot self-assign admin",
+      "status": "passed"
+    },
+    {
+      "name": "Anonymous reads published catalog, never draft/identities",
+      "status": "passed"
+    },
+    {
+      "name": "Customer sees only own order and both own seller suborders",
+      "status": "passed"
+    },
+    {
+      "name": "Seller cannot read other seller suborders or full marketplace master order",
+      "status": "passed"
+    },
+    {
+      "name": "Seller sees own draft only; cannot change moderation, stock or money",
+      "status": "passed"
+    },
+    {
+      "name": "Safe seller edits do not cross tenants",
+      "status": "passed"
+    },
+    {
+      "name": "Client cannot change roles, suspend identities, confirm payments or create settlements",
+      "status": "passed"
+    },
+    {
+      "name": "Delivery operator sees assigned company shipment only, no orders or customer profiles",
+      "status": "passed"
+    },
+    {
+      "name": "No assignment means no operator shipment access",
+      "status": "passed"
+    },
+    {
+      "name": "Reviewer cannot read finance or other private profiles; admin needs explicit permissions",
+      "status": "passed"
+    },
+    {
+      "name": "Private document storage isolates sellers and customers",
+      "status": "passed"
+    },
+    {
+      "name": "Internal complaint notes are never visible to customers or sellers",
+      "status": "passed"
+    },
+    {
+      "name": "Suspended user loses even own private access and public catalog hides suspended seller",
+      "status": "passed"
+    },
+    {
+      "name": "Last active admin cannot be suspended, demoted or deleted",
+      "status": "passed"
+    },
+    {
+      "name": "Duplicate order idempotency and payment event are rejected",
+      "status": "passed"
+    },
+    {
+      "name": "Cross-store order items rejected",
+      "status": "passed"
+    },
+    {
+      "name": "Negative money, inconsistent order totals and unsafe bounds are rejected",
+      "status": "passed"
+    },
+    {
+      "name": "Order snapshots, audit, ledger and commission entries are immutable",
+      "status": "passed"
+    },
+    {
+      "name": "Database audit logs actual seller metadata update",
+      "status": "passed"
+    },
+    {
+      "name": "Unbalanced financial batches cannot commit",
+      "status": "passed"
+    },
+    {
+      "name": "Partial settlement allocation allowed; duplicate/over-allocation rejected",
+      "status": "passed"
+    },
+    {
+      "name": "Sale commission cannot be recorded twice for one seller order",
+      "status": "passed"
+    },
+    {
+      "name": "No unsafe PUBLIC execute or writable financial API grants",
+      "status": "passed"
+    }
+  ]
+}

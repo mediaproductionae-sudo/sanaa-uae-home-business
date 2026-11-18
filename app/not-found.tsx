@@ -1,0 +1,2 @@
+import Link from 'next/link';
+export default function NotFound(){return <main id="main" className="wrap inner-page"><div className="empty"><h1>الصفحة غير موجودة</h1><p>قد يكون معرّف المنتج أو المتجر غير صحيح. يمكنك متابعة التصفح من الاختيارات التجريبية.</p><div className="action-row"><Link className="primary" href="/products/">استكشاف المنتجات</Link><Link className="join" href="/stores/">استكشاف المتاجر</Link><Link className="text-button" href="/">العودة للرئيسية</Link></div></div></main>}

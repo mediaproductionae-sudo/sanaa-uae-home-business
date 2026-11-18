@@ -1,0 +1,47 @@
+{
+  "viewports": [
+    {
+      "width": 1920,
+      "height": 1080,
+      "pages": 13,
+      "errors": []
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "pages": 13,
+      "errors": []
+    },
+    {
+      "width": 1366,
+      "height": 768,
+      "pages": 13,
+      "errors": []
+    },
+    {
+      "width": 1024,
+      "height": 768,
+      "pages": 13,
+      "errors": []
+    },
+    {
+      "width": 820,
+      "height": 1180,
+      "pages": 13,
+      "errors": []
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "pages": 13,
+      "errors": []
+    },
+    {
+      "width": 360,
+      "height": 800,
+      "pages": 13,
+      "errors": []
+    }
+  ],
+  "flows": "all passed"
+}
