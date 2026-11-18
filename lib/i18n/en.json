@@ -773,5 +773,8 @@
   "مسؤول السلامة": "Safety officer",
   "معالجة شكوى": "Complaint handling",
   "منتج أو قرار غير صحيح.": "Invalid product or decision.",
-  "هذا الدور لا يملك صلاحية هذا القرار.": "This role does not have permission for this decision."
+  "هذا الدور لا يملك صلاحية هذا القرار.": "This role does not have permission for this decision.",
+  "صيغة الطلب غير مدعومة.": "Unsupported request content type.",
+  "صيغة البيانات غير صحيحة.": "Invalid request data.",
+  "تعذّر إتمام العملية حالياً.": "Unable to complete this action right now."
 }
