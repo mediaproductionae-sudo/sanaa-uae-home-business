@@ -32,7 +32,9 @@
     "test:localization-responsive": "node tests/localization-responsive.mjs",
     "test:localization-database": "npm run staging:test:database && node tests/localization-database.mjs",
     "test:localization-layout": "node tests/localization-layout.mjs",
-    "staging:test:localization": "node staging/tests/localization.mjs"
+    "staging:test:localization": "node staging/tests/localization.mjs",
+    "test:store-actions": "node tests/store-removal-state.mjs && node tests/store-actions.mjs",
+    "test:store-removal-database": "npm run staging:test:database && node tests/store-removal-database.mjs"
   },
   "dependencies": {
     "@supabase/ssr": "0.12.7",

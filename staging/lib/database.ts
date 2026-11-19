@@ -6,6 +6,7 @@ export type Database={public:Omit<Foundation['public'],'Tables'|'Functions'>&{Ta
  sanaa_save_store_localized:F<Database['public']['Functions']['sanaa_save_store']['Args']&{translation_name:string;translation_description:string;translation_approved:boolean},string>;
  sanaa_save_product_localized:F<Database['public']['Functions']['sanaa_save_product']['Args']&{original_language:string;translation_name:string;translation_description:string;translation_approved:boolean},string>;
  sanaa_search_catalog_ids:F<{search_text:string;after_uuid?:string|null;category_uuid?:string|null;store_uuid?:string|null;emirate_filter?:Foundation['public']['Enums']['emirate_code']|null},string[]>;
+ sanaa_archive_store:F<{store_uuid:string},undefined>;
  sanaa_upload_slot:F<{store_uuid:string},undefined>;
  sanaa_enroll_seller:F<{business_name:string},string>;
  sanaa_profile_save:F<{display_name:string},undefined>;

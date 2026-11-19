@@ -776,5 +776,20 @@
   "هذا الدور لا يملك صلاحية هذا القرار.": "This role does not have permission for this decision.",
   "صيغة الطلب غير مدعومة.": "Unsupported request content type.",
   "صيغة البيانات غير صحيحة.": "Invalid request data.",
-  "تعذّر إتمام العملية حالياً.": "Unable to complete this action right now."
+  "تعذّر إتمام العملية حالياً.": "Unable to complete this action right now.",
+  "حذف المتجر": "Delete store",
+  "تأكيد حذف المتجر": "Confirm store deletion",
+  "هل أنت متأكد من عملية حذف المتجر؟": "Are you sure you want to delete this store?",
+  "سيُزال المتجر وجميع منتجاته من العرض والسلة والمفضلة. ستبقى سجلات الطلبات والشكاوى السابقة محفوظة. لا يمكن التراجع عن الحذف من هذه الشاشة.": "The store and all its products will be removed from the marketplace, cart and favorites. Historical orders and complaints will be preserved. This action cannot be undone from this screen.",
+  "سيُزال المتجر ومنتجاته من العرض، وتبقى سجلات الطلبات والشكاوى محفوظة.": "The store and its products will be removed from public view. Order and complaint records will be preserved.",
+  "تم حذف المتجر ومنتجاته. يمكنك إنشاء متجر جديد.": "Store and products removed. You can create a new store.",
+  "ليس لديك متجر حالياً. اضغط إنشاء متجر للبدء.": "You do not have a store yet. Choose Create store to begin.",
+  "لا يوجد متجر": "No store",
+  "إلغاء إنشاء متجر": "Cancel store creation",
+  "لا يمكنك حذف متجر لا تملكه.": "You cannot delete a store you do not own.",
+  "لا يمكنك تعديل متجر لا تملكه.": "You cannot edit a store you do not own.",
+  "أدخل بريد التواصل الخاص بالمتجر.": "Enter the store contact email address.",
+  "تحقق من الاسم والوصف والتصنيف والأوقات والأيام وبريد التواصل.": "Check the name, description, category, opening hours, days and contact email.",
+  "حذف متجر": "Store removal",
+  "حذف المتجر بواسطة مالكه مع الاحتفاظ بسجلات الطلبات والشكاوى": "Store removed by its owner; order and complaint records retained."
 }
