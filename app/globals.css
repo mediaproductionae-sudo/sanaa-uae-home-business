@@ -115,3 +115,7 @@ bdi[dir=auto]{unicode-bidi:isolate}
 @media(max-width:600px){.header-actions{flex-wrap:wrap;justify-content:flex-end;max-width:calc(100% - 118px)}.language-switch{order:4;flex-basis:100%;justify-content:flex-end}.header{padding-block:12px}.translation-fields{padding:14px}html[dir=ltr] .hero-copy h1{font-size:clamp(34px,8vw,44px)}}
 html[dir=ltr] .lucide-arrow-up-left{transform:rotate(90deg)}
 .language-switch button{min-width:44px}
+
+.header-favorites .lucide-heart{color:var(--ink);transition:color .18s ease,fill .18s ease}
+.header-favorites.has-favorites .lucide-heart{color:var(--berry)}
+@media(prefers-reduced-motion:reduce){.header-favorites .lucide-heart{transition:none}}
