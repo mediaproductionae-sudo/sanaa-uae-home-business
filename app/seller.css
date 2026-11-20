@@ -8,3 +8,5 @@
 .seller-product-cell{display:flex;align-items:center;gap:12px;min-width:190px;max-width:320px;white-space:normal}.seller-product-cell img{width:48px;height:48px;object-fit:cover;border-radius:8px;flex-shrink:0}.seller-icon.danger{color:#ad3342}.seller-chart-detail{min-height:28px}
 @media(max-width:600px){.seller-kpis{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.seller-kpi{padding:18px}.seller-kpi strong{font-size:24px}}
 .seller-content{scroll-margin-block-start:20px}.seller-section-heading h2[tabindex="-1"]:focus{outline:none}.seller-section-heading>.seller-actions{margin:0;flex-wrap:wrap;gap:10px}.seller-actions>.seller-danger{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px}.seller-empty>svg{color:#008655}
+
+.seller-store-actions{justify-content:flex-start;gap:10px;margin-block:8px 32px}
