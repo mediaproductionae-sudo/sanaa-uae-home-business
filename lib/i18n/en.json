@@ -791,5 +791,13 @@
   "أدخل بريد التواصل الخاص بالمتجر.": "Enter the store contact email address.",
   "تحقق من الاسم والوصف والتصنيف والأوقات والأيام وبريد التواصل.": "Check the name, description, category, opening hours, days and contact email.",
   "حذف متجر": "Store removal",
-  "حذف المتجر بواسطة مالكه مع الاحتفاظ بسجلات الطلبات والشكاوى": "Store removed by its owner; order and complaint records retained."
+  "حذف المتجر بواسطة مالكه مع الاحتفاظ بسجلات الطلبات والشكاوى": "Store removed by its owner; order and complaint records retained.",
+  "إرفاق الرخصة التجارية": "Attach trade license",
+  "اختر ملف PDF أو صورة PNG أو JPEG أو WebP لا تتجاوز 5 ميغابايت.": "Choose a PDF, PNG, JPEG or WebP file up to 5 MB.",
+  "تعذّر حفظ المرفق على هذا الجهاز. تحقق من مساحة التخزين وحاول مجدداً.": "Could not save the attachment on this device. Check available storage and try again.",
+  "PDF أو PNG أو JPEG أو WebP، حتى 5 ميغابايت. يُحفظ المرفق على هذا الجهاز فقط عند حفظ المتجر، ولا يُرسل للمراجعة تلقائياً.": "PDF, PNG, JPEG or WebP, up to 5 MB. The attachment is linked when you save the store, stays on this device and is not automatically submitted for review.",
+  "جارٍ تجهيز المرفق…": "Preparing attachment…",
+  "تنزيل المرفق": "Download attachment",
+  "إزالة المرفق": "Remove attachment",
+  "المرفق غير متاح على هذا الجهاز. أعد إرفاق الملف.": "The attachment is unavailable on this device. Please attach it again."
 }

@@ -1,7 +1,8 @@
+import type {LicenseAttachment} from './license-file';
 import type {LocalizedContent} from './i18n/content';
 import {getLanguage} from './i18n/store';
 import {products as originals,stores as originalStores} from './demo-data';
-export type Store=LocalizedContent&{id:number;name:string;description:string;emirate:string;area:string;category:string;activity:string;initial:string;logo:string;cover:string;open:string;close:string;days:string[];contact:string;active:boolean;license:'غير مقدم'|'قيد المراجعة'|'معتمد تجريبياً'|'مرفوض'};
+export type Store=LocalizedContent&{id:number;licenseAttachment?:LicenseAttachment;name:string;description:string;emirate:string;area:string;category:string;activity:string;initial:string;logo:string;cover:string;open:string;close:string;days:string[];contact:string;active:boolean;license:'غير مقدم'|'قيد المراجعة'|'معتمد تجريبياً'|'مرفوض'};
 export type CatalogProduct=LocalizedContent&{id:number;storeId:number;name:string;store:string;emirate:string;category:string;price:number;image:string;imageUrl:string;description:string;kind:'product'|'service';stock:number;status:'مسودة'|'منشور'|'موقوف'};
 export type Line={productId:number;quantity:number;name?:string;price?:number;storeId?:number};
 export const orderStatuses=['جديد','قيد التجهيز','جاهز','مكتمل','ملغى'] as const;

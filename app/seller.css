@@ -10,3 +10,5 @@
 .seller-content{scroll-margin-block-start:20px}.seller-section-heading h2[tabindex="-1"]:focus{outline:none}.seller-section-heading>.seller-actions{margin:0;flex-wrap:wrap;gap:10px}.seller-actions>.seller-danger{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px}.seller-empty>svg{color:#008655}
 
 .seller-store-actions{justify-content:flex-start;gap:10px;margin-block:8px 32px}
+
+.seller-license-field{border:1px solid var(--seller-border);border-radius:8px;padding:18px}.seller-license-field label>span{display:flex;align-items:center;gap:8px}.seller-license-field small{display:block;color:var(--seller-muted);margin-block:8px}.seller-license-summary{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-top:16px}.seller-license-summary>bdi{overflow-wrap:anywhere;min-width:0}.seller-license-summary>svg{color:#008655;flex-shrink:0}.seller-license-field p:empty{display:none}
