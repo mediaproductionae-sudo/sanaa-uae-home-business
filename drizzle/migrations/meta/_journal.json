@@ -1,0 +1,55 @@
+{
+  "version": "7",
+  "dialect": "postgresql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "7",
+      "when": 1794985888375,
+      "tag": "0000_sanaa_full_schema",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1795073323090,
+      "tag": "0001_seller_store_numeric_slug",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1795084160939,
+      "tag": "0002_store_archive",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "7",
+      "when": 1795152161174,
+      "tag": "0003_trade_license_attachment",
+      "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "7",
+      "when": 1795419220729,
+      "tag": "0004_delivery_manual_operations",
+      "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "7",
+      "when": 1795419701960,
+      "tag": "0005_delivery_offer_access_hardening",
+      "breakpoints": true
+    },
+    {
+      "idx": 6,
+      "version": "7",
+      "when": 1795419701961,
+      "tag": "0006_delivery_local_completion",
+      "breakpoints": true
+    }
+  ]
+}

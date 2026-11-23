@@ -1,60 +1,33 @@
 # صَنْعة | Sanaa UAE
 
-منصة عربية RTL للمشاريع المنزلية الإماراتية، تضم السوق والمتاجر والمنتجات والسلة والمفضلة، ومساحات العميل ومقدم الخدمة والإدارة. تتضمن المستودعات جميع ملفات التصميم والصور والشعار والخطوط وملفات SQL.
+Current connected TanStack Start application exported from Lovable and completed locally in Codex. Read [LOVABLE_HANDOFF.md](LOVABLE_HANDOFF.md) for migration/deployment steps and [the delivery report](docs/delivery-manual-assignment.md) for usage, tests and remaining limits.
 
-## التشغيل
+# Welcome to your Lovable project
 
-Node.js 20.9 أو أحدث:
+This project was built with [Lovable](https://lovable.dev).
+
+## Build with Lovable
+
+Open your project in the [Lovable editor](https://lovable.dev) and keep building.
+
+- **Ship faster**: describe what you want to build and Lovable handles the code.
+- **Stay in sync**: connect the project to GitHub and every change made in Lovable is committed straight to your repository.
+- **Full ownership**: this code is yours. Push to your repository and your changes sync back into Lovable, ready for your next prompt.
+
+## Development
+
+Prefer working locally? You need Node.js and npm — [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
 
 ```sh
-npm ci
+git clone <this-repository-url>
+cd <repository-name>
+npm i
 npm run dev
-npm run typecheck
-npm run build
 ```
 
-مدخل المشروع الرئيسي يصدر الموقع إلى `out/` باستخدام Next.js. يعتمد حالياً على حالة مشتركة محفوظة في المتصفح؛ لا يرسل الطلبات أو الشكاوى ولا ينفذ مدفوعات. الحسابات في هذا المدخل مساحات عمل محلية وليست مصادقة حقيقية، واختيار دور الإدارة لا يوفر حماية خادمية.
+## Built with
 
-## نقل التصميم إلى Lovable
-
-اقرأ [LOVABLE_HANDOFF.md](LOVABLE_HANDOFF.md) قبل التكييف. حافظ على التصميم والأصول وRTL والتجاوب، ثم اربط مصادر البيانات والصلاحيات. لا تعتبر إزالة عبارات النسخة التجريبية اعتماداً تقنياً للإطلاق.
-
-## Supabase ومدخل Node
-
-يتضمن `staging/` مدخلاً منفصلاً لـ Next.js Node مع كود Supabase Auth والكتالوج وStorage. التشغيل يحتاج إعداد متغيرات الاتصال وتطبيق migrations على قاعدة مستقلة واختبار المصادقة وRLS. لا يتحول الموقع الثابت إلى هذا المدخل تلقائياً.
-
-```sh
-npm run staging:build
-npm run staging:typecheck
-```
-
-ابدأ بـ [دليل الاتصال](docs/phase4b/connection-runbook.md) و[تقرير الربط](docs/phase4b/report.md). توجد migrations في `supabase/migrations/`. لا تضع `service_role` في المتصفح، ولا تنقل بيانات `seed` إلى الإنتاج باعتبارها نشاطاً فعلياً.
-
-## التنظيم
-
-- `app/`: الصفحات والتخطيط وCSS.
-- `components/`: الواجهات ومساحات العمل والمخزن المشترك.
-- `public/images/` و`public/fonts/`: الهوية والأصول.
-- `lib/`: نماذج البيانات والمنطق وأنواع قاعدة البيانات.
-- `staging/`: مدخل Node للمصادقة والبيانات المتصلة.
-- `supabase/`: migrations وسياسات الصلاحيات واختباراتها.
-- `docs/`: تقارير المراحل السابقة والقيود التاريخية؛ ليست نصوصاً تظهر في الواجهة.
-
-## التحقق
-
-بعد البناء: `npm run test:accounts` و`npm run test:seller` و`npm run test:admin` و`npm run test:responsive` و`npm run test:links`.
-
-ملفات `.env.example` قوالب فارغة. مفاتيح الاتصال وكلمات المرور وملفات البناء و`node_modules` مستبعدة من Git.
-
-## العربية والإنجليزية
-
-زر اللغة يعمل قبل الدخول وبعده، ويحفظ الاختيار مستقلاً عن بيانات الحساب والسلة. يدعم الكتالوج ترجمة اختيارية مع الرجوع للمحتوى الأصلي دون تكرار المنتجات. راجع [دليل اللغات ونتائج التحقق](docs/localization.md).
-
-```sh
-npm run test:localization
-npm run test:localization-responsive
-npm run test:localization-layout
-npm run test:localization-database
-```
-
-اختبار قاعدة البيانات الأخير يستخدم حاوية PostgreSQL المحلية المعزولة ويعيد تهيئة قاعدة الاختبار فقط؛ لا يستخدم مشروع Supabase مستضافاً. يلزم تشغيل `npm run db:test:start` أولاً.
+- TanStack Start
+- TypeScript
+- React
+- Tailwind CSS

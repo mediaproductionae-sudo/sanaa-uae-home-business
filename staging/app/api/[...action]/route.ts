@@ -1,9 +1,0 @@
-import {NextResponse} from 'next/server';
-import {randomUUID} from 'node:crypto';
-import {requireConfig} from '../../../lib/config';
-import {AppError,guardOrigin,boundedBody} from '../../../lib/security';
-import {authAction} from '../../../lib/auth-actions';
-import {catalogAction} from '../../../lib/catalog-actions';
-import {upload} from '../../../lib/upload';
-export const runtime='nodejs';
-export async function POST(request:Request,{params}:{params:Promise<{action:string[]}>}){const requestId=randomUUID();try{const c=requireConfig();guardOrigin(request,c.origin);const {action}=await params;const key=action.join('/');let result;if(key==='storage/upload')result=await upload(request);else{if(!request.headers.get('content-type')?.startsWith('application/json'))throw new AppError(415,'INVALID_CONTENT_TYPE','صيغة الطلب غير مدعومة.');let body;try{body=JSON.parse(new TextDecoder().decode(await boundedBody(request,action[0]==='catalog'?32768:16384)))}catch(error){if(error instanceof AppError)throw error;throw new AppError(400,'INVALID_JSON','صيغة البيانات غير صحيحة.')}if(!body||Array.isArray(body)||typeof body!=='object')throw new AppError(400,'INVALID_JSON','صيغة البيانات غير صحيحة.');if(action[0]==='auth'&&action.length===2)result=await authAction(action[1],body);else if(action[0]==='catalog'&&action.length===2)result=await catalogAction(action[1],body);else throw new AppError(404,'NOT_FOUND','الإجراء غير متاح.');}return NextResponse.json(result,{headers:{'Cache-Control':'private, no-store'}})}catch(error){const e=error instanceof AppError?error:new AppError(503,'TEMPORARILY_UNAVAILABLE','تعذّر إتمام العملية حالياً.');return NextResponse.json({error:e.publicMessage,code:e.code,requestId},{status:e.status,headers:{'Cache-Control':'private, no-store',...(e.status===429?{'Retry-After':'60'}:{})}})}}
