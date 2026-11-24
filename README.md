@@ -1,4 +1,4 @@
-# صَنْعة | Sanaa UAE
+# رزقنا | Rezqna UAE
 
 Current connected TanStack Start application exported from Lovable and completed locally in Codex. Read [LOVABLE_HANDOFF.md](LOVABLE_HANDOFF.md) for migration/deployment steps and [the delivery report](docs/delivery-manual-assignment.md) for usage, tests and remaining limits.
 

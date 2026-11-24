@@ -6,9 +6,9 @@ export const deliveryQuery = (request: DeliveryRead, actorId: string) => queryOp
   staleTime: 0, refetchInterval: 10000, retry: false,
 });
 export const deliveryHead = (title: string) => ({ meta: [
-  { title: `${title} | Sanaa UAE` },
-  { name: 'description', content: `${title} — Sanaa UAE delivery operations / إدارة التوصيل في صَنْعه` },
-  { property: 'og:title', content: `${title} | Sanaa UAE` },
-  { property: 'og:description', content: `${title} — Sanaa UAE delivery operations / إدارة التوصيل في صَنْعه` },
+  { title: `${title} | Rezqna UAE` },
+  { name: 'description', content: `${title} — Rezqna UAE delivery operations / إدارة التوصيل في رزقنا` },
+  { property: 'og:title', content: `${title} | Rezqna UAE` },
+  { property: 'og:description', content: `${title} — Rezqna UAE delivery operations / إدارة التوصيل في رزقنا` },
   { property: 'og:type', content: 'website' }, { name: 'twitter:card', content: 'summary' },
 ] });

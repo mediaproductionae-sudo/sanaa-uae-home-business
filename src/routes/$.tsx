@@ -21,8 +21,8 @@ function titleFor(path: string) {
 
 export const Route = createFileRoute("/$")({
   head: ({ params }) => {
-    const t = `${titleFor(clean(params._splat))} | صَنْعه`;
-    const d = "صَنْعه منصة لاكتشاف المشاريع المنزلية الإماراتية ومنتجاتها، ومتابعة المتاجر والحرف المحلية.";
+    const t = `${titleFor(clean(params._splat))} | رزقنا`;
+    const d = "رزقنا منصة لاكتشاف المشاريع المنزلية الإماراتية ومنتجاتها، ومتابعة المتاجر والحرف المحلية.";
     return { meta: [{ title: t }, { name: "description", content: d }, { property: "og:title", content: t }, { property: "og:description", content: d }, { property: "og:type", content: "website" }, { name: "twitter:card", content: "summary" }] };
   },
   component: SlugPage,
