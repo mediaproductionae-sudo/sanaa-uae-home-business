@@ -74,21 +74,30 @@ dialog{width:min(510px,calc(100% - 32px));max-height:calc(100dvh - 32px);overflo
 @media(max-width:600px){.brand-wordmark{font-size:10px}.footer .brand-wordmark{font-size:11px}}
 @media(max-width:350px){.header .brand-wordmark{font-size:8px}}
 
-/* Ambient 3D miniatures live only in the unused desktop margins. */
+/* Ambient miniatures reserve clear side rails on laptops and larger screens. */
 .home-with-crafts{position:relative;isolation:isolate}
 .floating-crafts{display:none;pointer-events:none;user-select:none}
-@media(min-width:1560px) and (min-height:650px){
+@media(min-width:1024px) and (min-height:500px){
+ .home-with-crafts{--craft-size:clamp(56px,5.6vw,88px);--craft-rail:calc(var(--craft-size) + 24px)}
+ .home-with-crafts>.wrap,.home-with-crafts>.hero-stage>.wrap{width:min(1280px,calc(100% - var(--craft-rail)*2))}
  .floating-crafts{display:block;position:absolute;inset:0;z-index:2;overflow:clip;contain:layout paint;pointer-events:none}
- .craft-miniature{position:absolute;width:min(184px,calc((100vw - 1280px)/2 - 40px));aspect-ratio:1;opacity:.86;animation:craft-drift 20s ease-in-out infinite;pointer-events:none}
+ .craft-miniature{position:absolute;width:var(--craft-size);aspect-ratio:1;opacity:.86;animation:craft-drift 20s ease-in-out infinite;pointer-events:none}
  .craft-miniature span{display:block;width:100%;height:100%;background-image:url('/images/floating-crafts.webp');background-size:300% 200%;background-repeat:no-repeat;pointer-events:none}
- .craft-perfume,.craft-jewelry,.craft-pottery{left:calc((100% - 1280px)/4);margin-left:calc(min(184px,(100vw - 1280px)/2 - 40px)/-2)}
- .craft-dates,.craft-textile,.craft-beauty{right:calc((100% - 1280px)/4);margin-right:calc(min(184px,(100vw - 1280px)/2 - 40px)/-2)}
+ .craft-perfume,.craft-jewelry,.craft-pottery{left:calc(var(--craft-rail)/2);margin-left:calc(var(--craft-size)/-2)}
+ .craft-dates,.craft-textile,.craft-beauty{right:calc(var(--craft-rail)/2);margin-right:calc(var(--craft-size)/-2)}
  .craft-perfume{top:6%;animation-delay:-5s;--craft-tilt:-9deg}.craft-perfume span{background-position:0 0}
  .craft-dates{top:16%;animation-duration:24s;animation-delay:-12s;--craft-tilt:7deg}.craft-dates span{background-position:50% 0}
  .craft-textile{top:43%;animation-duration:23s;animation-delay:-4s;--craft-tilt:-7deg}.craft-textile span{background-position:100% 0}
  .craft-jewelry{top:39%;animation-duration:26s;animation-delay:-16s;--craft-tilt:8deg}.craft-jewelry span{background-position:0 100%}
  .craft-beauty{top:72%;animation-duration:22s;animation-delay:-9s;--craft-tilt:6deg}.craft-beauty span{background-position:50% 100%}
  .craft-pottery{top:78%;animation-duration:25s;animation-delay:-18s;--craft-tilt:-6deg}.craft-pottery span{background-position:100% 100%}
+}
+@media(min-width:1024px) and (max-width:1559px) and (min-height:500px){
+ .craft-perfume{top:clamp(72px,14svh,140px)}
+ .craft-dates{top:clamp(180px,38svh,320px)}
+}
+@media(min-width:1560px) and (min-height:500px){
+ .home-with-crafts{--craft-size:min(184px,calc((100vw - 1280px)/2 - 40px));--craft-rail:calc((100% - 1280px)/2)}
 }
 @keyframes craft-drift{0%,100%{transform:translate3d(0,6px,0) rotate(var(--craft-tilt))}50%{transform:translate3d(0,-10px,0) rotate(calc(var(--craft-tilt) + 4deg))}}
 @media(prefers-reduced-motion:reduce){.craft-miniature{animation:none;transform:rotate(var(--craft-tilt))}}
