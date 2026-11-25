@@ -142,3 +142,8 @@ html[dir=ltr] .lucide-arrow-up-left{transform:rotate(90deg)}
 @media(max-width:1100px) and (min-width:901px){.trust.trust-strip{gap:24px;padding:28px 24px}.trust-strip .trust-item{grid-template-columns:38px minmax(0,1fr);gap:10px}.trust-strip .trust-icon{width:38px;height:38px;border-radius:11px}.trust-strip .trust-detail::before{inset-inline-start:-12px}.trust-strip h2,.trust-strip h3{font-size:22px}}
 @media(max-width:900px){.trust.trust-strip{grid-template-columns:repeat(2,minmax(0,1fr));gap:26px 32px;padding:28px}.trust-strip .trust-intro{grid-column:1/-1}.trust-strip .trust-detail::before{display:none}.trust-strip .trust-learn-more{grid-column:1/-1;justify-self:start}}
 @media(max-width:600px){.trust.trust-strip{grid-template-columns:minmax(0,1fr);gap:20px;padding:24px 20px}.trust-strip .trust-item,.trust-strip .trust-learn-more{grid-column:auto}.trust-strip .trust-detail{padding-block-start:20px;border-block-start:1px solid #d8e8df}.trust-strip h2,.trust-strip h3{font-size:23px}.trust-strip .trust-learn-more{margin-inline-start:60px}}
+
+/* Keep cart and favorites together in both interface directions. */
+.header-shopping{display:flex;align-items:center;gap:2px;flex-shrink:0}
+.header-cart:hover{color:var(--green)}
+@media(max-width:600px){.header-actions .language-switch{flex-basis:auto;margin-inline-start:auto}}
