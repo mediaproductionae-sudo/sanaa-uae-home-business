@@ -1,9 +1,7 @@
 import { z } from 'zod';
 export const emirates = ['abu_dhabi','dubai','sharjah','ajman','umm_al_quwain','ras_al_khaimah','fujairah'] as const;
-export const normalizePhone = (value: string) => {
- const digits = value.replace(/[٠-٩]/g, c => String(c.charCodeAt(0)-1632)).replace(/[\s()-]/g,'');
- return /^05\d{8}$/.test(digits) ? '+971'+digits.slice(1) : digits.startsWith('00') ? '+'+digits.slice(2) : digits;
-};
+import {normalizePhone} from '@/account/phone-number';
+export {normalizePhone} from '@/account/phone-number';
 export const normalizeIban = (value: string) => value.replace(/\s/g,'').toUpperCase();
 export function validIban(value: string) {
  const iban=normalizeIban(value);if(!/^AE\d{21}$/.test(iban))return false;

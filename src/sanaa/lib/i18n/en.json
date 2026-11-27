@@ -929,5 +929,19 @@
   "رد على الشكوى": "Complaint response",
   "تمت المعالجة": "Resolved",
   "مصعّدة": "Escalated",
-  "مرفوضة": "Rejected"
+  "مرفوضة": "Rejected",
+  "حساب متعامل": "Customer account",
+  "معلومات الحساب والتواصل": "Account and contact information",
+  "عنوان التوصيل": "Delivery address",
+  "اسم الشارع — اختياري": "Street name — optional",
+  "رقم المنزل أو الفيلا أو الشقة": "House, villa or apartment number",
+  "العنوان المحفوظ سابقاً:": "Previously saved address:",
+  "يلزم تفعيل إعدادات حساب المتعامل على الخادم.": "The customer account configuration must be enabled on the server.",
+  "تحقق من رقم الهاتف قبل حفظ التغييرات.": "Verify your phone number before saving changes.",
+  "يلزم حساب متعامل نشط للوصول إلى هذه البيانات.": "An active customer account is required to access these details.",
+  "راجع معلومات الحساب والعنوان قبل الحفظ.": "Review your account and address details before saving.",
+  "تعذّر تحميل معلومات الحساب.": "Unable to load account information.",
+  "تعذّر تأكيد حفظ معلومات الحساب. حدّث الصفحة للتحقق.": "Unable to confirm that your account information was saved. Refresh to check.",
+  "جارٍ تحميل معلومات الحساب…": "Loading account information…",
+  "تم حفظ معلومات الحساب والعنوان.": "Your account and address details have been saved."
 }

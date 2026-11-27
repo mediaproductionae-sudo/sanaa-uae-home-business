@@ -1,6 +1,6 @@
 import type { SupabaseClient } from '@supabase/supabase-js';
 import { supabase } from '@/integrations/supabase/client';
-import { normalizePhone, validateAttachment, type ProfileDraft } from './schema';
+import { validateAttachment, type ProfileDraft } from './schema';
 // New RPCs are supplied in docs/sql for review by the managed database owner.
 // The caller's JWT and the server RPC enforce ownership; no privileged key.
 const db=supabase as unknown as SupabaseClient;
@@ -18,14 +18,7 @@ function fail(error:{code?:string;message?:string}|null){
 }
 export async function loadProfile():Promise<ProfileRecord>{const {data,error}=await db.rpc('sanaa_seller_personal_get');fail(error);if(!data?.draft)throw new ProfileError('تعذّر تحميل الملف الشخصي.');return data as ProfileRecord;}
 export async function saveProfile(draft:ProfileDraft,complete:boolean):Promise<ProfileRecord>{const {data,error}=await db.rpc('sanaa_seller_personal_save',{payload:draft,complete_profile:complete});fail(error);return data as ProfileRecord;}
-export async function sendPhoneOtp(phone:string){
- const {error}=await supabase.auth.updateUser({phone:normalizePhone(phone)});
- if(error)throw new ProfileError('تعذّر إرسال رمز التحقق. تحقق من الرقم أو إعداد خدمة الرسائل، ثم حاول لاحقاً.');
-}
-export async function verifyPhoneOtp(phone:string,token:string){
- const {error}=await supabase.auth.verifyOtp({phone:normalizePhone(phone),token:token.trim(),type:'phone_change'});
- if(error)throw new ProfileError('رمز التحقق غير صحيح أو انتهت صلاحيته.');
-}
+export {sendPhoneOtp,verifyPhoneOtp} from '@/account/phone-verification';
 export async function uploadProfileFile(file:File,kind:'avatar'|'bank'){
  const problem=validateAttachment(file,kind);if(problem)throw new ProfileError(problem);
  const {data,error}=await supabase.auth.getUser();if(error||!data.user)throw new ProfileError('سجّل الدخول أولاً.');
